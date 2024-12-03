@@ -1,0 +1,498 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.card {
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.book-list {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-item {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.book-cover {
+    width: 120px;
+    height: 160px;
+    margin-right: 1rem;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.book-info {
+    flex-grow: 1;
+}
+
+.book-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.book-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-author {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.book-meta {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.book-description {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.reviews-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.review-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.review-rating {
+    color: #f0ad4e;
+}
+
+.review-content {
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.review-meta {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.borrowing-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.borrowing-item {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    margin-bottom: 1rem;
+}
+
+.borrowing-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.borrowing-status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.status-borrowed {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.status-returned {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status-overdue {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.borrowing-dates {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.favorite-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.favorite-card {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    padding: 1rem;
+}
+
+.favorite-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.favorite-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.favorite-description {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.favorite-meta {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.search-bar {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.filter-section {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #f8d7da;
+    border-radius: 4px;
+}
+
+.success-message {
+    color: #28a745;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #d4edda;
+    border-radius: 4px;
+}
+
+.btn-floating {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    z-index: 1000;
+}
+
+.btn-floating:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 7px rgba(0,0,0,.3);
+}
+
+/* 图书表单样式 */
+#addBookForm .form-label {
+    font-weight: 500;
+}
+
+#addBookForm .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#addBookForm select.form-control {
+    cursor: pointer;
+}
+
+#addBookForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* 必填字段标记 */
+#addBookForm .form-label::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+}
+
+#addBookForm .form-label:not([for="publisher"]):not([for="publish_date"]):not([for="price"]):not([for="cover_url"]):not([for="description"])::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+}
+
+/* 输入验证样式 */
+#addBookForm input:invalid {
+    border-color: #dc3545;
+}
+
+#addBookForm input:invalid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+}
+
+/* 模态框样式 */
+.modal-lg {
+    max-width: 800px;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .book-item {
+        flex-direction: column;
+    }
+
+    .book-cover {
+        width: 100%;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .book-actions {
+        margin-top: 1rem;
+    }
+
+    .favorite-list {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-floating {
+        bottom: 1rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+    }
+}
+
+/* 分类管理样式 */
+.table-responsive {
+    margin-bottom: 2rem;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0,123,255,.05);
+}
+
+/* 分类表单样式 */
+#addCategoryForm .form-label {
+    font-weight: 500;
+}
+
+#addCategoryForm .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#addCategoryForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#addCategoryForm .form-text {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+/* 必填字段标记 */
+#addCategoryForm .form-label[for="name"]::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+}
+
+/* 按钮样式 */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-sm i {
+    margin-right: 0.25rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .table-responsive {
+        margin-bottom: 1rem;
+    }
+
+    .btn-sm {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .table td {
+        white-space: nowrap;
+    }
+}
+
+/* 评分样式 */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 25px;
+    color: #ddd;
+    padding: 0 2px;
+}
+
+.rating input:checked ~ label {
+    color: #ffd700;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffd700;
+}
+
+/* 评论列表样式 */
+.comment-item {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.comment-rating {
+    color: #ffd700;
+}
+
+.comment-content {
+    margin-bottom: 0.5rem;
+}
+
+.comment-footer {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* 收藏夹样式 */
+.favorite-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.favorite-item:hover {
+    background-color: #f8f9fa;
+}
+
+.favorite-item.selected {
+    background-color: #e9ecef;
+}
+
+.favorite-item .badge {
+    font-size: 0.75rem;
+}
+
+/* 动画效果 */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: none;
+} 
